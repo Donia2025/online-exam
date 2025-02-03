@@ -1,0 +1,54 @@
+{
+  "quiz": [
+    {
+      "question": "What is the result of 5 + '5' in JavaScript?",
+      "options": ["55", "10", "Error", "NaN"],
+      "correctAnswer": "55"
+    },
+    {
+      "question": "Which keyword is used to define a constant in JavaScript?",
+      "options": ["let", "var", "const", "final"],
+      "correctAnswer": "const"
+    },
+    {
+      "question": "What is the correct syntax for a function in JavaScript?",
+      "options": ["function = myFunction()", "function myFunction() {}", "function:myFunction() {}", "function myFunction() => {}"],
+      "correctAnswer": "function myFunction() {}"
+    },
+    {
+      "question": "What is the default value of an uninitialized variable in JavaScript?",
+      "options": ["undefined", "null", "NaN", "false"],
+      "correctAnswer": "undefined"
+    },
+    {
+      "question": "Which method is used to convert a string to an integer in JavaScript?",
+      "options": ["parseInt()", "parseFloat()", "Number()", "toInt()"],
+      "correctAnswer": "parseInt()"
+    },
+    {
+      "question": "How do you write a comment in JavaScript?",
+      "options": ["// comment", "# comment", "/* comment */", "comment()"],
+      "correctAnswer": "// comment"
+    },
+    {
+      "question": "Which symbol is used for strict equality comparison in JavaScript?",
+      "options": ["==", "===", "=", ":="],
+      "correctAnswer": "==="
+    },
+    {
+      "question": "What is the output of console.log(typeof null) in JavaScript?",
+      "options": ["object", "null", "undefined", "error"],
+      "correctAnswer": "object"
+    },
+    {
+      "question": "How do you declare an array in JavaScript?",
+      "options": ["[]", "{}", "()", "array()"],
+      "correctAnswer": "[]"
+    },
+    {
+      "question": "Which method is used to add an element to the end of an array in JavaScript?",
+      "options": ["push()", "pop()", "shift()", "unshift()"],
+      "correctAnswer": "push()"
+    }
+  ]
+}

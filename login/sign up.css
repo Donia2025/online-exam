@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.button-Style {
+    background-color: #fff;
+    color: #537F71;
+    text-transform: uppercase;
+    cursor: pointer;
+ 
+}
+span,h1,h2,p{
+  cursor:default;  
+}
+
+.container {
+    box-shadow: 0 0.3125rem 1rem rgba(0, 0, 0, 0.35);
+
+}
+
+.container input {
+    outline: none;
+}
+span{
+    color:white;
+ 
+}
+
+
+.toggle {
+    background: linear-gradient(to right, #8daea7bb, #537F71);
+    width: 200%;
+  
+}
+
+.hidden {
+   visibility: hidden;}
+
+i{
+position: absolute;
+right:10px;
+top:60%;
+transform: translateY(-145%);
+color:#537F71;
+font-size: 18px;
+
+}
+
+@media (max-width: 576px) {
+  .sideimg{
+    display: none;
+  }
+  .form{
+    width:100%;
+  
+  }
+  .container{
+    height: 100%;
+      box-shadow: 0 0.3125rem 1rem rgba(0, 0, 0, 0.35);
+}
+    
+    .formContainer{
+        width:100%!important;
+        height: 100% !important;
+        
+    
+    }
+    .button-Style {
+        letter-spacing: 0.01rem;
+        font-size: 0.6rem;
+    }
+ 
+     .registration{
+        font-size: 0.8rem;
+    } 
+    span{
+    
+           
+            font-size: 9px;
+    
+    }
+ 
+
+
+}
+
+@media (min-width: 577px) {
+    .sideimg{
+        display: none;
+      }
+      .sideimg{
+        display: none;
+      }
+      .form{
+        width:100%;
+        
+     
+      }
+      .container{
+        height: 90%;}
+     
+        .button-Style {
+            letter-spacing: 0.025rem;
+            font-size: 0.7rem;
+
+        }
+     
+        .registration{
+            font-size: 1rem;
+        } 
+        .formContainer{
+            width:100%!important;
+            height: 100% !important;
+        }
+        span{
+           
+            font-size: 12px;
+        }
+   
+       
+      
+ 
+}
+@media (min-width: 991px) {
+    .sideimg{
+        display:block;
+      }
+     
+      .form{
+        width:50%
+
+    }
+    .container{
+        height: 90%;}
+        .form{
+            width:100%
+    
+        }
+        .formContainer{
+            width:50%!important;
+            height: 100% !important;
+        }
+        .container{
+            width: 50% !important;
+        }
+
+
+        .button-Style {
+            letter-spacing: 0.025rem;
+            font-size: 0.8rem;
+        }
+      
+        .registration{
+            display: none;
+        }
+        .registrationmain{
+            font-size: 1.5rem;
+        }
+       
+        span{
+           
+            font-size: 9px;
+        }
+    
+}

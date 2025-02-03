@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam Online</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <link rel="icon" href="../galaBook0.png " type="image/png" />
+
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+      body {
+        height: 100vh;
+      }
+      .background {
+        height: 100%;
+        background-color: #537f71;
+      }
+      h1 {
+        font-family: "Outfit", serif;
+        font-size: 450%;
+        font-family: "Outfit", sans-serif;
+      }
+      .click {
+        transform: scale(1.5);
+        color: #537f71;
+      }
+      .click:hover {
+        transform: scale(1.6);
+        color: #ffffff !important;
+        background-color: #537f71;
+      }
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 250%;
+        }
+        .click {
+          transform: scale(1.1);
+        }
+        .click:hover {
+          transform: scale(1.2);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row g-0 background">
+      <div
+        class="col-12 d-flex flex-column align-items-center justify-content-center gap-5"
+      >
+        <h1 class="pb-3 text-light">Are You Ready ?</h1>
+        <div>
+          <a href="../Exam/Exam.html"
+            ><button
+              type="button"
+              class="btn btn-light btn-lg rounded-4 click ps-5 pe-5 pt-2 pb-2"
+            >
+              Submit
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>

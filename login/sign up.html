@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam Online</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <link rel="icon" href="../galaBook0.png " type="image/png" />
+
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+
+    <link rel="stylesheet" href="sign up.css" />
+  </head>
+
+  <body
+    class="d-flex flex-column justify-content-center align-items-center"
+    style="height: 100vh"
+  >
+    <div
+      class="row g-0 container border rounded-3 mx-auto position-relative w-100 h-75"
+      id="container"
+      style="background-color: #537f71"
+    >
+      <div
+        class="col-lg-6 col-12 toggel sideimg position-absolute top-0 start-0 h-100 w-lg-50"
+        style="border-radius: 0 75px 75px 0; z-index: 2; background-color: #fff"
+      >
+        <div
+          class="d-flex flex-column justify-content-center align-items-center text-center h-100"
+        >
+          <h1 style="color: #537f71">Welcome</h1>
+          <img src="young people students.svg" class="w-75" />
+          <p
+            style="font-size: 12px; color: #537f71"
+            class="registrationmain pt-2 fw-normal"
+          >
+            Already have an account <a href="login.html">Login</a>
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="formContainer col-lg-6 col-md-7 col-12 position-absolute top-0 end-0 h-75 w-lg-50"
+      >
+        <form
+          class="form sign d-flex flex-column justify-content-center align-items-center h-100 px-5"
+          style="background-color: #537f71"
+        >
+          <h2 class="text-light pb-3">Create Account</h2>
+
+          <div class="position-relative col-12 col-md-7 col-lg-10">
+            <input
+              type="text"
+              id="first-name"
+              placeholder="First Name"
+              autocomplete="off"
+              class="border-0 p-2 rounded-2 w-100 fs-6"
+              style="background-color: #eee"
+              oninput="checkFirstName(this,'iconeFName')"
+            />
+            <i class="hidden" id="iconeFName"></i>
+            <span class="firstnameError hidden"
+              >* please enter character only</span
+            >
+          </div>
+
+          <div class="position-relative col-12 col-md-7 col-lg-10">
+            <input
+              type="text"
+              id="last-name"
+              placeholder="Last Name"
+              autocomplete="off"
+              oninput="checklastName(this, 'lastnameIcon')"
+              class="lastName border-0 p-2 rounded-2 w-100 fs-6"
+              style="background-color: #eee"
+            />
+            <i class="hidden" id="lastnameIcon"></i>
+            <span class="hidden lastnameError"
+              >* please enter character only</span
+            >
+          </div>
+
+          <div class="position-relative col-12 col-md-7 col-lg-10">
+            <input
+              type="email"
+              id="email"
+              placeholder="Email"
+              autocomplete="off"
+              oninput="checkEmail(this,'iconeEmail')"
+              class="email border-0 p-2 rounded-2 w-100 fs-6"
+              style="background-color: #eee"
+            />
+            <i class="hidden" id="iconeEmail"></i>
+            <span class="emailError hidden">* your Email is not valid </span>
+          </div>
+
+          <div class="position-relative col-12 col-md-7 col-lg-10">
+            <input
+              type="password"
+              id="password"
+              placeholder="Password "
+              autocomplete="off"
+              class="passowrd border-0 p-2 rounded-2 w-100 fs-6"
+              style="background-color: #eee"
+              oninput="checkPassword(this, 'iconePassword')"
+            />
+            <i class="hidden" id="iconePassword"></i>
+            <span class="passwordError hidden">
+              * password should be more than 9 characters
+            </span>
+          </div>
+
+          <div class="position-relative col-12 col-md-7 col-lg-10">
+            <input
+              type="password"
+              id="confirm-password"
+              placeholder="confirm-password"
+              autocomplete="off"
+              class="confirm border-0 p-2 rounded-2 w-100 fs-6"
+              style="background-color: #eee"
+              oninput="checkConfirmedPassword(this, 'iconeConfirmPassword')"
+            />
+            <i class="hidden" id="iconeConfirmPassword"></i>
+            <span class="passwordConfirmError hidden"
+              >* your passwords don't match</span
+            >
+          </div>
+
+          <button
+            type="button"
+            class="col-6 col-md-3 col-lg-5 SignUp button-Style py-lg-2 px-lg-3 my-lg-2 border-0 rounded-2 fw-semibold py-2 px-2"
+            onclick="save(event)"
+          >
+            Sign Up
+          </button>
+          <p class="registration text-light registration pt-2 fw-normal">
+            Already have an account <a href="login.html">Login</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="sign up.js"></script>
+  </body>
+</html>

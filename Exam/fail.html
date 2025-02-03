@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam Online</title>
+    <link rel="stylesheet" href="Exam.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <link rel="icon" href="../galaBook0.png " type="image/png" />
+
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+      body {
+        background-color: #537f71;
+      }
+      * {
+        cursor: default;
+      }
+
+      h1,
+      p {
+        color: #fff;
+        font-family: "Outfit", sans-serif;
+      }
+
+      .btn {
+        background-color: #ffffff;
+        color: #537f71;
+        transition: transform 0.3s ease, background-color 0.3s ease,
+          color 0.3s ease;
+      }
+
+      .btn:hover {
+        color: #537f71;
+        background-color: #fff !important;
+        border-color: #537f71;
+        transform: scale(1.1);
+        background-color: #537f71;
+      }
+      @media (max-width: 575.98px) {
+        h1 {
+          font-weight: 600;
+          font-size: 250%;
+        }
+        .img {
+          max-width: 65%;
+          min-width: 50%;
+        }
+        p {
+          font-size: 130%;
+        }
+      }
+      @media (min-width: 576px) {
+        .img {
+          max-width: 40%;
+          min-width: 35%;
+        }
+        p {
+          font-size: 200%;
+        }
+      }
+      @media (min-width: 992px) {
+        .img {
+          max-width: 20%;
+          min-width: 15%;
+        }
+        p {
+          font-size: 200%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text-center mx-2">
+      <div class="row g-0">
+        <div class="col-12 title pt-5 pb-5">
+          <h1>Result</h1>
+          <img src="fail.svg" class="img pt-5" />
+          <p class="result pt-5">Your Grade is <span class="grade"> </span></p>
+          <p class="result pb-4">
+            Try again <span class="name"></span>, you can do it
+          </p>
+          <a href="../Home/Home.html"
+            ><button
+              type="button"
+              class="btn rounded-3 ps-5 pe-5 pt-2 pb-2 pt-lg-2 pb-lg-2"
+            >
+              Home
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+      let grade = document.querySelector(".grade");
+      let degreeAppear = localStorage.getItem("degree");
+
+      grade.textContent = `${degreeAppear}%`;
+
+      let firstName = document.querySelector(".name");
+      let name = localStorage.getItem("firstName");
+
+      firstName.textContent = `${name}`;
+    </script>
+  </body>
+</html>

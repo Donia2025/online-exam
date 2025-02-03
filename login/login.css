@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.button-Style {
+    background-color: #537F71;
+    color: #fff;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 0.03125rem;
+}
+span,h1,h2,p{
+    cursor: default;
+}
+
+.container {
+    box-shadow: 0 0.3125rem 1rem rgba(0, 0, 0, 0.35);
+}
+
+.container input {
+    outline: none;
+}
+
+
+.toggle {
+    background: linear-gradient(to right, #8daea7bb, #537F71);
+    width: 200%;
+  
+}
+
+.parent-toggle{
+    display:none
+}
+span{
+    color:#537F71 !important;
+    font-size: 12px;
+}
+
+@media (max-width: 576px) {
+ 
+    .button-Style {
+        letter-spacing: 0.009rem;
+        font-size: 0.6rem;
+    }
+ 
+     .registration{
+        font-size: 0.8rem;
+    } 
+    span{
+    
+           
+            font-size: 9px;
+    
+    }
+    
+
+
+}
+
+  @media (min-width: 577px) {
+    .button-Style {
+        letter-spacing: 0.025rem;
+        font-size: 0.7rem;
+
+    }
+ 
+    .registration{
+        font-size: 1rem;
+    } 
+    .formContainer{
+        width:100%!important;
+        height: 100% !important;
+    }
+    span{
+       
+        font-size: 12px;
+    }
+
+         
+        
+   
+  }
+
+@media (min-width: 992px) {
+
+   
+    .parent-toggle{
+       display:block
+}
+.account{
+    display:none
+}
+.container{
+    width: 50% !important;
+}
+.button-Style {
+    letter-spacing: 0.025rem;
+    font-size: 0.8rem;
+}
+
+.registration{
+    display: none;
+}
+.registrationmain{
+    font-size: 1.5rem;
+}
+
+span{
+   
+    font-size: 10px;
+}
+
+}
+
+  

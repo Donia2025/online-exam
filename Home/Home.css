@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: "Outfit", sans-serif;
+}
+
+.svgImg {
+    display: none;
+}
+
+.click {
+    display: block;
+}
+.btn:hover,.title,.nav-link{
+    color: #537f71;  
+}
+button:focus, button:active,
+a:focus, a:active{
+    color: #537f71;  
+
+}
+
+.btn {
+    background-color: #537f71;
+    color: #fff;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #fff !important;
+    border-color: #537f71;
+    transform: scale(1.1);
+}
+
+.title {
+  font-weight: 600; 
+}
+
+@media (max-width: 576px) {
+    .title {
+        font-size: 250%;
+    }
+
+    .img {
+        max-width: 50%;
+        min-width: 65%;
+    }
+}
+
+@media (min-width: 577px) {
+    .title {
+        font-size: 350%;
+    }
+
+    .img {
+        width: 35%;
+    }
+}
+@media (min-width: 992px) {
+    .nav-link:hover{
+        color: #537f71;
+     text-decoration: underline;
+    }
+    .title {
+        font-size: 400%;
+    }
+    .svgImg{
+        display: block;
+    }
+    .img{
+        width: 52%;
+        
+    }
+}
+.img{
+    animation: upimg 2s linear 
+}
+@keyframes upimg{
+    0%{
+opacity: 0;
+transform:translateY(-100px);
+    }
+    100%{
+opacity: 1;
+transform:translateY(0);
+    }
+}

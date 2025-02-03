@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam Online</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <link rel="icon" href="../galaBook0.png " type="image/png" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="login.css" />
+    <style>
+      .hidden {
+        visibility: hidden;
+      }
+    </style>
+  </head>
+
+  <body
+    class="d-flex flex-column justify-content-center align-items-center"
+    style="height: 100vh"
+  >
+    <div
+      class="row g-0 container border rounded-3 mx-auto; position-relative w-100 w-md-100 w-lg-50 h-75"
+      id="container"
+    >
+      <div
+        class="w-100 w-md-100 w-lg-50 sign-in position-absolute top-0 h-100 start-0"
+      >
+        <form
+          class="col-sm-12 col-lg-6 d-flex flex-column justify-content-center align-items-center h-100 px-5"
+          style="background-color: #fff"
+        >
+          <h1 style="color: #537f71">Log In</h1>
+          <div class="position-relative col-12 col-md-6 col-lg-10">
+            <input
+              placeholder="Email"
+              type="email"
+              id="email"
+              autocomplete="off"
+              class="border-0 my-2 p-2 rounded-2 w-100 fs-6"
+              style="background-color: #eee"
+            />
+            <span class="emailError hidden">! Wrong email </span>
+          </div>
+          <div class="position-relative col-12 col-md-6 col-lg-10">
+            <input
+              placeholder="Password"
+              type="password"
+              id="passwordLogin"
+              autocomplete="off"
+              class="border-0 my-2 p-2 rounded-2 w-100 fs-6"
+              style="background-color: #eee"
+            />
+            <span class="passwordError hidden">! Wrong password </span>
+          </div>
+          <button
+            class="col-6 col-md-3 col-lg-5 button-Style py-2 px-5 my-2 border border-0 rounded-2 fw-semibold py-lg-2 px-lg-3 my-lg-2 py-2 px-2"
+            id="login"
+          >
+            Log In
+          </button>
+          <p
+            style="font-size: 12px"
+            class="registration mt-2 fw-normal account"
+          >
+            Don't have an account yet? <a href="sign up.html">Sign Up</a>
+          </p>
+        </form>
+      </div>
+
+      <div
+        class="parent-toggle position-absolute top-0 overflow-hidden h-100 w-50"
+        style="border-radius: 75px 0 0 75px; left: 50%; z-index: 2"
+      >
+        <div
+          class="toggle h-100 text-light position-relative"
+          style="background-color: #537f71"
+        >
+          <div
+            class="d-flex flex-column justify-content-center align-items-center text-center w-50 h-100"
+          >
+            <h1>Welcome Back</h1>
+            <img src="young people students.svg" class="w-75" />
+            <p style="font-size: 12px" class="registrationmain mt-2 fw-normal">
+              Don't have an account yet? <a href="sign up.html">Sign Up</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="login.js"></script>
+  </body>
+</html>

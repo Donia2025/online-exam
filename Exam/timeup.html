@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam Online</title>
+    <link rel="stylesheet" href="Exam.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <link rel="icon" href="../galaBook0.png " type="image/png" />
+
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+      * {
+        cursor: default;
+      }
+      h1,
+      p {
+        color: #537f71;
+        font-family: "Outfit", sans-serif;
+      }
+
+      .btn {
+        background-color: #537f71;
+        color: #fff;
+        transition: transform 0.3s ease, background-color 0.3s ease,
+          color 0.3s ease;
+      }
+
+      .btn:hover {
+        color: #537f71;
+        background-color: #fff !important;
+        border-color: #537f71;
+        transform: scale(1.1);
+      }
+
+      @media (max-width: 575.98px) {
+        h1 {
+          font-weight: 600;
+          font-size: 250%;
+        }
+        .img {
+          max-width: 65%;
+          min-width: 50%;
+        }
+        p {
+          font-size: 130%;
+        }
+      }
+      @media (min-width: 576px) {
+        .img {
+          max-width: 40%;
+          min-width: 35%;
+        }
+        p {
+          font-size: 200%;
+        }
+      }
+      @media (min-width: 992px) {
+        .img {
+          max-width: 20%;
+          min-width: 15%;
+        }
+        p {
+          font-size: 200%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text-center mx-2">
+      <div class="row g-0">
+        <div class="col-12 title pt-5 pb-5">
+          <h1>Exam Closed</h1>
+          <img src="Group 33.svg" class="img pt-5" />
+          <p class="result pt-5 pb-4">
+            <span class="name"></span> , you didn't pass the exam this time,
+            Timeout!!
+          </p>
+          <a href="../Home/Home.html"
+            ><button
+              type="button"
+              class="btn rounded-3 ps-5 pe-5 pt-2 pb-2 pt-lg-3 pb-lg-3"
+            >
+              Home
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+      let firstName = document.querySelector(".name");
+      let name = localStorage.getItem("firstName");
+
+      firstName.textContent = `${name}`;
+    </script>
+  </body>
+</html>
