@@ -9,7 +9,11 @@
 
 *{
     user-select: none;
-    box-sizing: border-box;
+   
+}
+body{
+    height: 100vh;
+     box-sizing: border-box;
 }
   .count,#timeup,h1,h3,#timer{
     cursor: default;
@@ -80,6 +84,9 @@
 
   
   @media (max-width: 575.98px) { 
+    html, body {
+        overflow: hidden;  
+      }
       .img {
           max-width: 100%;
           min-width: 80%;
@@ -121,6 +128,9 @@
   }
   
   @media (min-width: 576px) { 
+    html, body {
+        overflow: hidden;  
+      }
       .img {
           min-width: 20%;
           max-width: 20%;
