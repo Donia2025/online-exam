@@ -92,6 +92,9 @@ body{
   @media (orientation: landscape) {
     html, body {
         overflow: auto; 
+        height: auto;
+        min-height: 100vh;
+        width: 100vw;
      
     }
 }
