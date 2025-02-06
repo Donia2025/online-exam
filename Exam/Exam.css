@@ -17,11 +17,15 @@
 @media (orientation: landscape) {
     html, body {
         overflow: auto;
-        height: 100dvh; /* يضمن استخدام الارتفاع الفعلي */
+        height: 100dvh; 
         min-height: 100dvh;
         width: 100vw;
         margin: 0;
         padding: 0;
+
+    }
+    .content { 
+        padding-bottom: 20px; 
     }
 }
 @media (orientation: portrait) {
