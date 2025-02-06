@@ -89,6 +89,12 @@ body{
     overflow: hidden;  
   }
   }
+  @media (orientation: landscape) {
+    html, body {
+        overflow: auto; 
+     
+    }
+}
   
   @media (max-width: 575.98px) { 
   
