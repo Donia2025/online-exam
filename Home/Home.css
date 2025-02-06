@@ -4,6 +4,13 @@ body {
     width: 100vw;
     font-family: "Outfit", sans-serif;
 }
+:root {
+    --main-color: #537f71;
+  }
+  .btn:hover, .title, .nav-link, button:focus, button:active, a:focus, a:active {
+    color: var(--main-color);
+  }
+  
 
 .svgImg {
     display: none;
@@ -12,14 +19,7 @@ body {
 .click {
     display: block;
 }
-.btn:hover,.title,.nav-link{
-    color: #537f71;  
-}
-button:focus, button:active,
-a:focus, a:active{
-    color: #537f71;  
 
-}
 
 .btn {
     background-color: #537f71;

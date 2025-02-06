@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exam Online</title>
+    <title>Log In - Online Exam</title>
 
     <link
       rel="stylesheet"
@@ -28,7 +28,7 @@
   >
     <div
       class="row g-0 container border rounded-3 mx-auto; position-relative w-100 w-md-100 w-lg-50 h-75"
-      id="container"
+      id="container" role="form" aria-labelledby="login-form-title"
     >
       <div
         class="w-100 w-md-100 w-lg-50 sign-in position-absolute top-0 h-100 start-0"
@@ -46,8 +46,11 @@
               autocomplete="off"
               class="border-0 my-2 p-2 rounded-2 w-100 fs-6"
               style="background-color: #eee"
+              aria-required="true"
+               aria-describedby="email-error"
+               aria-labelledby="email"
             />
-            <span class="emailError hidden">! Wrong email </span>
+            <span class="emailError hidden" aria-live="assertive">! Wrong email </span>
           </div>
           <div class="position-relative col-12 col-md-6 col-lg-10">
             <input
@@ -57,12 +60,13 @@
               autocomplete="off"
               class="border-0 my-2 p-2 rounded-2 w-100 fs-6"
               style="background-color: #eee"
+              aria-required="true" aria-describedby="password-error"
             />
-            <span class="passwordError hidden">! Wrong password </span>
+            <span class="passwordError hidden" role="alert" aria-live="assertive">! Wrong password </span>
           </div>
           <button
             class="col-6 col-md-3 col-lg-5 button-Style py-2 px-5 my-2 border border-0 rounded-2 fw-semibold py-lg-2 px-lg-3 my-lg-2 py-2 px-2"
-            id="login"
+            id="login"  aria-label="Log in to your account"
           >
             Log In
           </button>
@@ -70,7 +74,7 @@
             style="font-size: 12px"
             class="registration mt-2 fw-normal account"
           >
-            Don't have an account yet? <a href="sign up.html">Sign Up</a>
+            Don't have an account yet? <a href="sign up.html" aria-label="Sign up for a new account">Sign Up</a>
           </p>
         </form>
       </div>
@@ -87,7 +91,7 @@
             class="d-flex flex-column justify-content-center align-items-center text-center w-50 h-100"
           >
             <h1>Welcome Back</h1>
-            <img src="young people students.svg" class="w-75" />
+            <img src="young people students.svg" alt="Illustration of two students studying together" class="w-75" />
             <p style="font-size: 12px" class="registrationmain mt-2 fw-normal">
               Don't have an account yet? <a href="sign up.html">Sign Up</a>
             </p>

@@ -3,25 +3,26 @@ let options = [];
 let correctAnswer = [];
 let studentAnswer = [];
 let selectedAnswers = [];
-const questionArea = document.querySelector(".question");
-const next = document.querySelector(".next");
-const prev = document.querySelector(".prev");
-const answersArea = document.querySelector(".answers");
-const countQuestionAppear = document.querySelector(".count");
-let time = document.getElementById("timer");
+const questionArea = document.querySelector('.question');
+const next = document.querySelector('.next');
+const prev = document.querySelector('.prev');
+const answersArea = document.querySelector('.answers');
+const countQuestionAppear = document.querySelector('.count');
+let time = document.getElementById('timer');
 console.log(time);
-let timeUpDiv = document.getElementById("timeup");
+let timeUpDiv = document.getElementById('timeup');
 let minutes = 5;
 let seconds = 0;
-let submit = document.getElementById("submit");
-const submitLink = document.querySelector(".submitLink");
-const list = document.querySelector(".list");
-const marksp = document.querySelectorAll(".list p");
-const allContent = document.querySelector(".row");
+let count = 0;
+let submit = document.getElementById('submit');
+const submitLink = document.querySelector('.submitLink');
+const list = document.querySelector('.list');
+const marksp = document.querySelectorAll('.list p');
+const allContent = document.querySelector('.row');
 
 async function get() {
   try {
-    let exam = await fetch("Exam.json");
+    let exam = await fetch('Exam.json');
 
     if (!exam.ok) {
       throw new Error(`${exam.status}`);
@@ -29,7 +30,7 @@ async function get() {
 
     let data = await exam.json();
     if (!data || data.quiz.length === 0) {
-      allContent.classList.add("hidden");
+      allContent.classList.add('hidden');
       allContent.innerHTML = `<img src="Loading.svg" class="iconLoading" style="width: 150px ;">
        <div>No questions available </div>`;
 
@@ -45,24 +46,25 @@ async function get() {
     });
 
     questions.forEach(function (element, index) {
-      const questionMark = document.createElement("div");
-      questionMark.classList.add("questioncircle");
+      const questionMark = document.createElement('div');
+      questionMark.classList.add('questioncircle');
       questionMark.innerHTML += `<span id="${index}">${index + 1}</span>`;
       list.append(questionMark);
 
-      questionMark.addEventListener("click", function (event) {
+      questionMark.addEventListener('click', function (event) {
+        count = index;
         displayQuestions(index);
       });
     });
     displayQuestions(0);
     const interval = setInterval(function () {
-      time.textContent = " ";
+      time.textContent = ' ';
       if (
-        localStorage.getItem("timerMinutes") &&
-        localStorage.getItem("timerSeconds")
+        localStorage.getItem('timerMinutes') &&
+        localStorage.getItem('timerSeconds')
       ) {
-        minutes = parseInt(localStorage.getItem("timerMinutes"));
-        seconds = parseInt(localStorage.getItem("timerSeconds"));
+        minutes = parseInt(localStorage.getItem('timerMinutes'));
+        seconds = parseInt(localStorage.getItem('timerSeconds'));
       } else {
         minutes = 2;
         seconds = 0;
@@ -75,16 +77,16 @@ async function get() {
       if (seconds === 0) {
         if (minutes === 0) {
           clearInterval(interval);
-          time.innerText = " ";
-          localStorage.removeItem("timerMinutes");
-          localStorage.removeItem("timerSeconds");
-          window.location.href = "timeup.html";
+          time.innerText = ' ';
+          localStorage.removeItem('timerMinutes');
+          localStorage.removeItem('timerSeconds');
+          window.location.href = 'timeup.html';
           return;
         }
 
         if (seconds === 0 && minutes === 0) {
           clear();
-          window.location.href = "timeup.html";
+          window.location.href = 'timeup.html';
         }
 
         minutes--;
@@ -93,48 +95,49 @@ async function get() {
         seconds--;
       }
       if (minutes < 1) {
-        time.style.color = "red";
+        time.style.color = 'red';
       }
-      localStorage.setItem("timerMinutes", minutes);
-      localStorage.setItem("timerSeconds", seconds);
+      localStorage.setItem('timerMinutes', minutes);
+      localStorage.setItem('timerSeconds', seconds);
     }, 1000);
   } catch (error) {
     console.log(error.message);
-    allContent.innerHTML = " ";
-    allContent.classList.add("hidden");
+    allContent.innerHTML = ' ';
+    allContent.classList.add('hidden');
     allContent.innerHTML = `<img src="Loading.svg" class="iconLoading" style="width: 150px ;">
         <div>Error loading users. Please try again later.</div>`;
   }
 }
 
-let questionElement = document.createElement("h3");
+let questionElement = document.createElement('h3');
+
 function displayQuestions(index) {
-  countQuestionAppear.textContent = "";
-  questionElement.textContent = "";
-  answersArea.innerHTML = "";
-  countQuestionAppear.textContent = `Q${+index + 1}/Q${questions.length}`;
+  countQuestionAppear.textContent = '';
+  questionElement.textContent = '';
+  answersArea.innerHTML = '';
   questionElement.textContent = questions[index];
+  countQuestionAppear.textContent = `Q${+index + 1}/Q${questions.length}`;
   questionArea.prepend(questionElement);
 
   for (let i = 0; i < options[index].length; i++) {
-    let answerElement = document.createElement("p");
+    let answerElement = document.createElement('p');
     answerElement.innerHTML = `
         <input type="radio" class="radio ${index + 1}" name="choose" value="${
       options[index][i]
     }" id="answer-${i}" ${
-      selectedAnswers[index] === options[index][i] ? "checked" : ""
+      selectedAnswers[index] === options[index][i] ? 'checked' : ''
     }>
         <label for="answer-${i}">${options[index][i]}</label>
     `;
     answersArea.append(answerElement);
   }
-  let radio = document.querySelectorAll(".radio");
+  let radio = document.querySelectorAll('.radio');
   radio.forEach(function (ele) {
-    ele.addEventListener("change", function () {
+    ele.addEventListener('change', function () {
       selectedAnswers[index] = ele.value;
 
-      let marks = document.querySelectorAll(".list span");
-      marks[index].style.color = "#537F71";
+      let marks = document.querySelectorAll('.list span');
+      marks[index].style.color = '#537F71';
       marks[
         index
       ].innerHTML = `<i class="fa-regular fa-circle-check iconMark"></i>`;
@@ -153,15 +156,13 @@ function displayQuestions(index) {
   }
 }
 
-let count = 0;
-
-next.addEventListener("click", function () {
+next.addEventListener('click', function () {
   if (count < questions.length - 1) {
     displayQuestions(++count);
   }
 });
 
-prev.addEventListener("click", function () {
+prev.addEventListener('click', function () {
   if (count > 0) {
     displayQuestions(--count);
   }
@@ -171,10 +172,10 @@ get();
 
 console.log(selectedAnswers);
 
-submit.addEventListener("click", function () {
-  time.innerText = " ";
-  localStorage.removeItem("timerMinutes");
-  localStorage.removeItem("timerSeconds");
+submit.addEventListener('click', function () {
+  time.innerText = ' ';
+  localStorage.removeItem('timerMinutes');
+  localStorage.removeItem('timerSeconds');
 
   let total = questions.length;
   let correctAnswersSum = 0;
@@ -186,10 +187,10 @@ submit.addEventListener("click", function () {
   }
   let percent = (correctAnswersSum / total) * 100;
   if (percent < 50) {
-    submitLink.setAttribute("href", "fail.html");
-    localStorage.setItem("degree", percent);
+    submitLink.setAttribute('href', 'fail.html');
+    localStorage.setItem('degree', percent);
   } else {
-    submitLink.setAttribute("href", "passed.html");
-    localStorage.setItem("degree", percent);
+    submitLink.setAttribute('href', 'passed.html');
+    localStorage.setItem('degree', percent);
   }
 });
