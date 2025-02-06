@@ -9,6 +9,7 @@
 
 *{
     user-select: none;
+    box-sizing: border-box;
 }
   .count,#timeup,h1,h3,#timer{
     cursor: default;
