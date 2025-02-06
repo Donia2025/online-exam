@@ -3,8 +3,12 @@
 * {
     margin: 0;
     padding: 0;
+  
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+}
+body{
+    height: 100vh;
 }
 
 .button-Style {
@@ -47,6 +51,9 @@ span{
 }
 
 @media (max-width: 576px) {
+    html, body {
+        overflow: hidden;  
+      }
  
     .button-Style {
         letter-spacing: 0.009rem;
@@ -68,6 +75,9 @@ span{
 }
 
   @media (min-width: 577px) {
+    html, body {
+        overflow: hidden;  
+      }
     .button-Style {
         letter-spacing: 0.025rem;
         font-size: 0.7rem;

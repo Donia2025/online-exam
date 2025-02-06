@@ -41,9 +41,6 @@ body {
 @media (max-width: 576px) {
     html, body {
         overflow: hidden;  
-        height: 100vh;  
-        margin: 0;
-        padding: 0;
       }
       
     .title {
@@ -59,9 +56,7 @@ body {
 @media (min-width: 577px) {
     html, body {
         overflow: hidden;  
-        height: 100vh;  
-        margin: 0;
-        padding: 0;
+       
       }
     .title {
         font-size: 350%;
