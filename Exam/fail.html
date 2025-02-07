@@ -48,7 +48,25 @@
         transform: scale(1.1);
         background-color: #537f71;
       }
+      @media (orientation: landscape) {
+  html, body {
+    overflow: auto;
+    height: 100dvh;
+    min-height: 100dvh;
+    width: 100vw;
+  }
+}
+@media (orientation: portrait) {
+  html, body {
+    overflow: hidden;
+    height: 100dvh;  
+    width: 100vw;
+  }
+
+
       @media (max-width: 575.98px) {
+     
+
         h1 {
           font-weight: 600;
           font-size: 250%;
