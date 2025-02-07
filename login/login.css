@@ -62,6 +62,10 @@ span{
           
             font-size: 9px;
     }
+    .formContainer{
+        width:100%!important;
+        height: 80% !important;
+    }
 
 }
 
@@ -78,7 +82,7 @@ span{
     } 
     .formContainer{
         width:100%!important;
-        height: 90% !important;
+        height: 80% !important;
     }
     span{
        
