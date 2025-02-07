@@ -25,6 +25,7 @@
 
 
 .btn {
+    display: inline-block;
     background-color: #537f71;
     color: #fff;
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
@@ -42,7 +43,9 @@
 
 @media (max-width: 576px) {
    
-      
+    .logo{
+        width:5%
+    }
     .title {
         font-size: 250%;
     }
@@ -57,6 +60,9 @@
  
     .title {
         font-size: 350%;
+    }
+    .logo{
+        width:5%
     }
 
     .img {
@@ -77,6 +83,9 @@
     .img{
         width: 52%;
         
+    }
+    .logo{
+        width:2%
     }
 }
 .img{
