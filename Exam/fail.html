@@ -16,17 +16,23 @@
     <link rel="stylesheet" href="../css/bootstrap.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
-      body {
-        background-color: #537f71;
    
-       
-      }
       * {
           padding: 0;
           margin: 0;
         cursor: default;
         box-sizing: border-box;
       }
+      body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #537f71;
+  height: 100svh; 
+  width: 100vw;
+  overflow: hidden;
+}
 
       h1,
       p {
@@ -48,21 +54,18 @@
         transform: scale(1.1);
         background-color: #537f71;
       }
+  
       @media (orientation: landscape) {
   html, body {
-    overflow: auto;
-    height: 100dvh;
-    min-height: 100dvh;
-    width: 100vw;
+    overflow: auto; 
   }
 }
+
 @media (orientation: portrait) {
   html, body {
-    overflow: hidden;
-    height: 100dvh;  
-    width: 100vw;
+    overflow: hidden; 
   }
-
+}
 
       @media (max-width: 575.98px) {
      
@@ -99,7 +102,7 @@
       }
     </style>
   </head>
-  <body class="d-flex flex-column justify-content-center align-items-center">
+  <body >
     <div class="text-center mx-2">
       <div class="row g-0">
         <div class="col-12 title ">
