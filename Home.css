@@ -43,9 +43,7 @@
 
 @media (max-width: 576px) {
    
-    .logo{
-        width:5%
-    }
+      
     .title {
         font-size: 250%;
     }
@@ -60,9 +58,6 @@
  
     .title {
         font-size: 350%;
-    }
-    .logo{
-        width:5%;
     }
 
     .img {
@@ -83,9 +78,6 @@
     .img{
         width: 52%;
         
-    }
-    .logo{
-        width:2%
     }
 }
 .img{
