@@ -10,6 +10,16 @@ body{
     height: 100vh;
 
 }
+@media (orientation: landscape) {
+    html, body {
+        overflow: auto;
+        height: 100dvh; 
+        min-height: 100dvh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+}
 
 .button-Style {
     background-color: #537F71;
