@@ -6,11 +6,20 @@
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
-body{
-    height: 100vh;
 
-}
-
+  
+@media (orientation: portrait) {
+    html, body {
+        overflow: hidden;
+        height: 100vh;}
+    }
+@media (orientation: landscape) {
+     html, body {
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+     }
+    }
 
 .button-Style {
     background-color: #537F71;
