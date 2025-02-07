@@ -39,9 +39,7 @@ body {
 }
 
 @media (max-width: 576px) {
-    html, body {
-        overflow: hidden;  
-      }
+   
       
     .title {
         font-size: 250%;
@@ -54,10 +52,7 @@ body {
 }
 
 @media (min-width: 577px) {
-    html, body {
-        overflow: hidden;  
-       
-      }
+ 
     .title {
         font-size: 350%;
     }
