@@ -50,9 +50,7 @@ span{
 }
 
 @media (max-width: 576px) {
-    html, body {
-        overflow: hidden;  
-      }
+  
  
     .button-Style {
         letter-spacing: 0.009rem;
@@ -70,9 +68,7 @@ span{
 }
 
   @media (min-width: 577px) {
-    html, body {
-        overflow: hidden;  
-      }
+
     .button-Style {
         letter-spacing: 0.025rem;
         font-size: 0.7rem;
