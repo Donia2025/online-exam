@@ -98,7 +98,7 @@ html,body{
   
       .img {
           max-width: 100%;
-          min-width: 80%;
+          min-width: 95%;
       }
   
       .mainTitle {
@@ -137,11 +137,10 @@ html,body{
   }
   
   @media (min-width: 576px) { 
-   
-      .img {
-          min-width: 20%;
-          max-width: 20%;
-      }
+    .img {
+        max-width: 70%;
+        min-width: 50%;
+    }
   
       #timer, #timeup {
           font-size: 150%;

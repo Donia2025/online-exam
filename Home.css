@@ -24,7 +24,7 @@
 }
 
 
-.btn:visited ,.btn{
+a:visited,.btn:active ,.btn{
     display: inline-block;
     background-color: #537f71;
     color: #fff;
