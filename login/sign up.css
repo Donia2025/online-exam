@@ -10,8 +10,7 @@ body{
     height: 100vh;
 }
 html, body {
-     
-    overflow: hidden;
+      overflow: hidden;
 }
 .button-Style {
     background-color: #fff;
