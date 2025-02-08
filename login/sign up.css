@@ -9,7 +9,10 @@
 body{
     height: 100vh;
 }
-
+html, body {
+     
+    overflow: hidden;
+}
 .button-Style {
     background-color: #fff;
     color: #537F71;
